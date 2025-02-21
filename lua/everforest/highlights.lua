@@ -1,7 +1,8 @@
 local highlights = {}
-local darken = require("everforest.colour_utility").darken
+
 
 local ColourUtility = require("everforest.colour_utility")
+local darken = ColourUtility.darken
 
 ---@enum Styles
 local styles = {
@@ -1224,7 +1225,6 @@ highlights.generate_syntax = function(palette, options)
     CmpItemKindInterface = syntax_entry(palette.teal, M.darken(palette.teal, 0.1), { styles.bold }),
     CmpItemKindColor = syntax_entry(palette.teal, M.darken(palette.teal, 0.1), { styles.bold }),
     CmpItemKindTypeParameter = syntax_entry(palette.teal, M.darken(palette.teal, 0.1), { styles.bold }),
-
 
     -- folke/trouble.nvim
     TroubleText = { link = "Fg" },
